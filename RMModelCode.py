@@ -6,7 +6,6 @@ import scipy
 import sklearn
 import scipy.integrate as spint
 from plotnine import *
-from ggplot import *
 import matplotlib.pyplot as plt
 
 #defining the function
@@ -81,9 +80,10 @@ plot_d=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_l
 plot_w=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="P"), color='red')+geom_line(aes(y="wHlow"), color='blue', linetype='dotted')+geom_line(aes(y="wPlow"), color='red', linetype='dotted')+geom_line(aes(y="wHhigh"), color='blue', linetype='dashed')+geom_line(aes(y="wPhigh"), color='red', linetype='dashed')+ggtitle("different w's")+ylab("count")+xlab("time")
 
 #Show Plots
-plot_b.show()
-plot_a.show()
-plot_e.show()
-plot_s.show()
-plot_d.show()
-plot_w.show()
+print(plot_b)
+print(plot_a)
+print(plot_e)
+print(plot_s)
+print(plot_d)
+print(plot_w)
+
