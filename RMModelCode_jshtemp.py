@@ -94,7 +94,7 @@ e=0.07
 s=0.2
 d=400
 w=5
-a=[0.00125, .0002, .0003, .0004, .0005]
+a=[0.001, .0002, .0003, .0004, .0005]
 
 
 
@@ -129,9 +129,8 @@ for item in parameters:
     count=count+1
     z=z+2
     #Graph Results
-plot_PoE_H=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H1"), color='red')+geom_line(aes(y="H2"), color='orange')+geom_line(aes(y="H3"), color='yellow')+geom_line(aes(y="H4"), color='green')+geom_line(aes(y="H5"), color='blue')+ggtitle("Paradox of Enrichment - Prey")+ylab("Prey Population")+xlab("time")
-plot_PoE_P=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="P1"), color='red')+geom_line(aes(y="P2"), color='orange')+geom_line(aes(y="P3"), color='yellow')+geom_line(aes(y="P4"), color='green')+geom_line(aes(y="P5"), color='blue')+ggtitle("Paradox of Enrichment - Predator")+ylab("Prey Population")+xlab("time")
+plot_PoE_H=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H1"), color='lightcoral')+geom_line(aes(y="H2"), color='indianred')+geom_line(aes(y="H3"), color='brown')+geom_line(aes(y="H4"), color='maroon')+geom_line(aes(y="H5"), color='black')+ggtitle("Paradox of Enrichment - Prey")+ylab("Prey Population")+xlab("time")
+plot_PoE_P=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="P1"), color='lightcoral')+geom_line(aes(y="P2"), color='indianred')+geom_line(aes(y="P3"), color='brown')+geom_line(aes(y="P4"), color='maroon')+geom_line(aes(y="P5"), color='black')+ggtitle("Paradox of Enrichment - Predator")+ylab("Prey Population")+xlab("time")
 
 #Show Plots
-print(plot_PoE_H)
 print(plot_PoE_P)
