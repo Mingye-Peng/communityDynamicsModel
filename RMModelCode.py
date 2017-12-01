@@ -94,7 +94,7 @@ e=0.07
 s=0.2
 d=400
 w=5
-a=[0.00125, .000125, .0002, .0003, .0005, .0005]
+a=[0.001, .0002, .0003, .0004, .0005]
 
 
 
@@ -107,7 +107,7 @@ parameters=parameters.values.tolist()
 times=np.arange(0,75,0.1)
 
 #create data frame for function output and fill with time values in first column
-modelOutput=pd.DataFrame(columns=["t", "H", "P", "bHlow", "bPlow", "bHhigh", "bPhigh", "aHlow", "aPlow", "aHhigh", "aPhigh", "eHlow", "ePlow", "eHhigh", "ePhigh", "sHlow", "sPlow", "sHhigh", "sPhigh", "dHlow", "dPlow", "dHhigh", "dPhigh", "wHlow", "wPlow", "wHhigh", "wPhigh"])
+modelOutput=pd.DataFrame(columns=["t", "H1", "P1", "H2", "P2", "H3", "P3", "H4", "P4", "H5", "P5"])
 modelOutput.t=times
 
 #Simulate the model
@@ -129,7 +129,8 @@ for item in parameters:
     count=count+1
     z=z+2
     #Graph Results
-plot_a=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="P"), color='red')+geom_line(aes(y="aHlow"), color='blue', linetype='dotted')+geom_line(aes(y="aPlow"), color='red', linetype='dotted')+geom_line(aes(y="aHhigh"), color='blue', linetype='dashed')+geom_line(aes(y="aPhigh"), color='red', linetype='dashed')+ggtitle("different a's")+ylab("count")+xlab("time")
+plot_PoE_H=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H1"), color='lightcoral')+geom_line(aes(y="H2"), color='indianred')+geom_line(aes(y="H3"), color='brown')+geom_line(aes(y="H4"), color='maroon')+geom_line(aes(y="H5"), color='black')+ggtitle("Paradox of Enrichment - Prey")+ylab("Prey Population")+xlab("time")
+plot_PoE_P=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="P1"), color='lightcoral')+geom_line(aes(y="P2"), color='indianred')+geom_line(aes(y="P3"), color='brown')+geom_line(aes(y="P4"), color='maroon')+geom_line(aes(y="P5"), color='black')+ggtitle("Paradox of Enrichment - Predator")+ylab("Prey Population")+xlab("time")
 
 #Show Plots
-print(plot_a)
+print(plot_PoE_P)
