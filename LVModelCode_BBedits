@@ -6,6 +6,7 @@ import scipy
 import sklearn
 import scipy.integrate as spint
 from plotnine import *
+import matplotlib.pyplot as plt
 
 #Define a custom function for Lotka Volterra model
 def LVSim(y,t0,b,a,e,s):
@@ -67,14 +68,16 @@ for i in range(0,len(parameters)):
 #Graph results manually from model output 
 ##plot of prey counts vs time, in which only paramter b is changing -- solid: initial b value, dotted: lower b value, dashed: higher b value
 plot_Hb=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="bHlow"), color='blue', linetype='dotted')+geom_line(aes(y="bHhigh"), color='blue', linetype='dashed')+ggtitle("Different b values")+ylab("Prey counts")+xlab("Time")+theme_bw()
+##plot of predator counts vs time, in which only paramter b is changing -- solid: initial b value, dotted: lower b value, dashed: higher b value
 plot_Pb=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="bPlow"), color='red', linetype='dotted')+geom_line(aes(y="bPhigh"), color='red', linetype='dashed')+ggtitle("Different b values")+ylab("Predator counts")+xlab("Time")+theme_bw()
 
+###same as above, now only parameter a is changing
 plot_Ha=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="aHlow"), color='blue', linetype='dotted')+geom_line(aes(y="aHhigh"), color='blue', linetype='dashed')+ggtitle("Different a values")+ylab("Prey counts")+xlab("Time")+theme_bw()
 plot_Pa=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="aPlow"), color='red', linetype='dotted')+geom_line(aes(y="aPhigh"), color='red', linetype='dashed')+ggtitle("Different a values")+ylab("Predator counts")+xlab("Time")+theme_bw()
-
+###same as above, now only parameter e is changing
 plot_He=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="eHlow"), color='blue', linetype='dotted')+geom_line(aes(y="eHhigh"), color='blue', linetype='dashed')+ggtitle("Different e values")+ylab("Prey counts")+xlab("Time")+theme_bw()
 plot_Pe=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="ePlow"), color='red', linetype='dotted')+geom_line(aes(y="ePhigh"), color='red', linetype='dashed')+ggtitle("Different e values")+ylab("Predator counts")+xlab("Time")+theme_bw()
-
+###same as above, now only parameter s is changing
 plot_Hs=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="sHlow"), color='blue', linetype='dotted')+geom_line(aes(y="sHhigh"), color='blue', linetype='dashed')+ggtitle("Different s values")+ylab("Prey counts")+xlab("Time")+theme_bw()
 plot_Ps=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="sPlow"), color='red', linetype='dotted')+geom_line(aes(y="sPhigh"), color='red', linetype='dashed')+ggtitle("Different s values")+ylab("Predator counts")+xlab("Time")+theme_bw()
 
