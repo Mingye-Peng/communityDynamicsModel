@@ -90,11 +90,12 @@ LVplot_Pe=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+ge
 ###same as above, now only parameter s is changing
 LVplot_Hs=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="sHlow"), color='blue', linetype='dotted')+geom_line(aes(y="sHhigh"), color='blue', linetype='dashed')+ggtitle("Different s values")+ylab("Prey counts")+xlab("Time")+theme_bw()
 LVplot_Ps=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="sPlow"), color='red', linetype='dotted')+geom_line(aes(y="sPhigh"), color='red', linetype='dashed')+ggtitle("Different s values")+ylab("Predator counts")+xlab("Time")+theme_bw()
-###Show all plots
-print(LVplot_Hb); print(LVplot_Pb) 
-print(LVplot_Ha); print(LVplot_Pa)
-print(LVplot_He); print(LVplot_Pe)
-print(LVplot_Hs); print(LVplot_Ps)
+
+#Show all plots
+print(LVplot_Hb, LVplot_Pb) 
+print(LVplot_Ha, LVplot_Pa)
+print(LVplot_He, LVplot_Pe)
+print(LVplot_Hs, LVplot_Ps)
 
 ######################################################################
 #Part 2 - Rosenzweig-MacArthur Model
@@ -184,17 +185,21 @@ RMplot_Pd=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+ge
 RMplot_Hw=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="wHlow"), color='blue', linetype='dotted')+geom_line(aes(y="wHhigh"), color='blue', linetype='dashed')+ggtitle("Different w values")+ylab("Prey counts")+xlab("Time")+theme_bw()
 RMplot_Pw=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="wPlow"), color='red', linetype='dotted')+geom_line(aes(y="wPhigh"), color='red', linetype='dashed')+ggtitle("Different w values")+ylab("Predator counts")+xlab("Time")+theme_bw()
 
-#Show all plots
-print(LVplot_Hb); print(LVplot_Pb)
-print(LVplot_Ha); print(LVplot_Pa) 
-print(LVplot_He); print(LVplot_Pe) 
-print(LVplot_Hs); print(LVplot_Ps)
-print(RMplot_Hd); print(RMplot_Pd) 
-print(RMplot_Hw); print(RMplot_Pw)
+#Show plots
+print(RMplot_Hb, RMplot_Pb)
+print(RMplot_Ha, RMplot_Pa) 
+print(RMplot_He, RMplot_Pe) 
+print(RMplot_Hs, RMplot_Ps)
+print(RMplot_Hd, RMplot_Pd) 
+print(RMplot_Hw, RMplot_Pw)
 
 ######################################################################
 #Part 3 - Paradox of Enrichment
 #Simulate model dynamics, changing the carrying capacity (alpha)
+##define initial values for state variables
+H0=500; P0=120; N0=[H0,P0]
+##define time steps
+times=np.arange(0,75,0.1)
 ##define parameters
 b=0.8
 e=0.07
@@ -227,5 +232,12 @@ for i in range(0,len(parameters)):
     modelP_Output.iloc[:, i+1]=modelSim[1]
 
 #Plot the results
-plot_PoE_H=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H1"), color='lightcoral')+geom_line(aes(y="H2"), color='indianred')+geom_line(aes(y="H3"), color='brown')+geom_line(aes(y="H4"), color='maroon')+geom_line(aes(y="H5"), color='black')+ggtitle("Paradox of Enrichment - Prey")+ylab("Prey Population")+xlab("time")+theme_bw()
 plot_PoE_P=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P1"), color='lightcoral')+geom_line(aes(y="P2"), color='indianred')+geom_line(aes(y="P3"), color='brown')+geom_line(aes(y="P4"), color='maroon')+geom_line(aes(y="P5"), color='black')+ggtitle("Paradox of Enrichment - Predator")+ylab("Predator Population")+xlab("Time")+theme_bw()
+plot_PoE_H=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H1"), color='lightcoral')+geom_line(aes(y="H2"), color='indianred')+geom_line(aes(y="H3"), color='brown')+geom_line(aes(y="H4"), color='maroon')+geom_line(aes(y="H5"), color='black')+ggtitle("Paradox of Enrichment - Prey")+ylab("Prey Population")+xlab("Time")+theme_bw()
+
+#Show plots
+print(plot_PoE_P, plot_PoE_H)
+
+
+
+
