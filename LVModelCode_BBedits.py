@@ -82,14 +82,14 @@ plot_Hs=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geo
 plot_Ps=ggplot(modelP_Output,aes(x="t"))+geom_line(aes(y="P"), color='red')+geom_line(aes(y="sPlow"), color='red', linetype='dotted')+geom_line(aes(y="sPhigh"), color='red', linetype='dashed')+ggtitle("Different s values")+ylab("Predator counts")+xlab("Time")+theme_bw()
 
 #Show all plots
-plot_Hb
-plot_Pb
-plot_Ha
-plot_Pa
-plot_He
-plot_Pe
-plot_Hs
-plot_Ps
+print(plot_Hb)
+print(plot_Pb)
+print(plot_Ha)
+print(plot_Pa)
+print(plot_He)
+print(plot_Pe)
+print(plot_Hs)
+print(plot_Ps)
 
 
 
