@@ -87,3 +87,49 @@ print(plot_s)
 print(plot_d)
 print(plot_w)
 
+###Paradox of Enrichment 
+##define intial values make lists
+b=0.8
+e=0.07
+s=0.2
+d=400
+w=5
+a=[0.00125, .000125, .0002, .0003, .0005, .0005]
+
+
+
+##make lists to data frame and rearrange order of columns and make to list
+parameters=pd.DataFrame({'b':b, 'a':a, 'e':e, 's':s, 'd':d, 'w':w})
+parameters=parameters[['b','a','e','s','d','w']]
+parameters=parameters.values.tolist()
+
+#define time steps
+times=np.arange(0,75,0.1)
+
+#create data frame for function output and fill with time values in first column
+modelOutput=pd.DataFrame(columns=["t", "H", "P", "bHlow", "bPlow", "bHhigh", "bPhigh", "aHlow", "aPlow", "aHhigh", "aPhigh", "eHlow", "ePlow", "eHhigh", "ePhigh", "sHlow", "sPlow", "sHhigh", "sPhigh", "dHlow", "dPlow", "dHhigh", "dPhigh", "wHlow", "wPlow", "wHhigh", "wPhigh"])
+modelOutput.t=times
+
+#Simulate the model
+#Simulate the model
+count=0
+z=2
+for item in parameters:
+    #run siumulation with odeint and iterate over different sets of parameters
+    modelSim=spint.odeint(func=RMSim,y0=N0,t=times,args=tuple(parameters[count]))
+
+    #convert output from array to data frame
+    modelSim=pd.DataFrame(data=modelSim)
+    
+    #add results to Model Output data frame
+    modelOutput.iloc[:, z-1]=modelSim[0]
+    modelOutput.iloc[:, z]=modelSim[1]
+    
+    #add to iterative values
+    count=count+1
+    z=z+2
+    #Graph Results
+plot_a=ggplot(modelOutput,aes(x="t"))+geom_line(aes(y="H"), color='blue')+geom_line(aes(y="P"), color='red')+geom_line(aes(y="aHlow"), color='blue', linetype='dotted')+geom_line(aes(y="aPlow"), color='red', linetype='dotted')+geom_line(aes(y="aHhigh"), color='blue', linetype='dashed')+geom_line(aes(y="aPhigh"), color='red', linetype='dashed')+ggtitle("different a's")+ylab("count")+xlab("time")
+
+#Show Plots
+print(plot_a)
