@@ -8,7 +8,6 @@ import os
 import numpy as np
 import pandas as pd
 import scipy
-import sklearn
 import scipy.integrate as spint
 from plotnine import *
 
@@ -206,7 +205,7 @@ e=0.07
 s=0.2
 d=400
 w=5
-a=[0.001, .0009, .0007, .0006, .0005]
+a=[0.00125, .0009, .0007, .0006, .0005]
 ##make lists to data frame
 parameters=pd.DataFrame({'b':b, 'a':a, 'e':e, 's':s, 'd':d, 'w':w})
 ##rearrange order of columns
