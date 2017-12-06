@@ -4,7 +4,6 @@
 ### Authors: Brittni Bertolet, Josh Hobgood, Aaron Long, Om Neelay
 
 #Import packages
-import os
 import numpy as np
 import pandas as pd
 import scipy
