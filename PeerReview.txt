@@ -1,0 +1,24 @@
+
+Summary for Biocomputing Final Project Peer-Review:
+Reviewers: Brittni Bertolet, Josh Hobgood, and Aaron Long
+Reviewees: Katelyn, Hannah, Kathleen, and Grant 
+
+
+Major summary: It seems like you're using the notebook summary as a checklist and sourcing out to other 
+files to provide information for what you did. It might be more helpful to put the information here, so the reader 
+doesn't need to look at other files, unless they would like to recreate your analysis. Because Jupyter 
+Notebook is interactive and can utilize code, this is possible and would really enhance your project. 
+
+Notes on BLAST: 
+- The summary of files for the BLAST analysis that you listed in your notebook summary was really helpful. 
+It might be helpful to also include the "head" of the final table, so that the reader can see and understand 
+the data real fast. 
+
+
+Notes on Translation of RNA seq data:
+- What does the codonmap.txt data look like? 
+- It would be helpful to have more pseudo code in the for loop. We were still a little confused. 
+- For closing files, is the syntax "control1.close" or "control1.close()"? We weren't sure about this.
+
+Notes on Further Exploration:
+- Could you summarize the objectives a little more? 
