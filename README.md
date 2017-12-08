@@ -10,17 +10,19 @@
 
 -------
 
+### Project Plan:
+
 **All authors contributed equally to the final version.**
 
-**Question 1: Understanding the Lotka-Volterra Model**
+*Question 1: Understanding the Lotka-Volterra Model*
 
 Josh Hobgood constructed the conceptual model. Om Neelay wrote the code for the model simulations. Brittni Bertolet edited code, commented additional psuedo-code, and helped create graphs. Josh Hobgood wrote the first draft of the summary questions. 
 
-**Question 2: Understanding the Rosenzweig-MacArthur Model**
+*Question 2: Understanding the Rosenzweig-MacArthur Model*
 
 Brittni Bertolet constructed the conceptual model. Aaron Long wrote the code for the model simulations. Brittni Bertolet edited code, commented additional psuedo-code, and helped create graphs. Aaron Long wrote the first draft of the summary questions. 
 
-**Question 3: Paradox of the Plankton**
+*Question 3: Paradox of the Plankton*
 
 Josh Hobgood wrote code for the model simulation. Om Neelay wrote the first draft of summary questions. 
 
