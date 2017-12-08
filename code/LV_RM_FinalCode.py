@@ -30,7 +30,7 @@ b=0.5; a=0.02; e=0.1; s=0.2
 ##put parameters in tuple
 params=(b,a,e,s)
 #define time steps
-times=np.arange(0,75,0.1)
+times=np.arange(0,300,0.1)
 ##simulate
 modelSim=spint.odeint(func=LVSim,y0=N0,t=times,args=params)
 ##put output in a dataframe with time
@@ -115,7 +115,7 @@ b=0.8; a=0.001; e=0.07; s=0.2; d=400; w=5
 ##put parameters in tuple
 params=(b,a,e,s,d,w)
 ##define time steps
-times=np.arange(0,75,0.1)
+times=np.arange(0,300,0.1)
 ##simulate
 modelSim=spint.odeint(func=RMSim,y0=N0,t=times,args=params)
 ##put output in a dataframe with time
@@ -196,7 +196,7 @@ print(RMplot_Hw, RMplot_Pw)
 ##define initial values for state variables
 H0=500; P0=120; N0=[H0,P0]
 ##define time steps
-times=np.arange(0,75,0.1)
+times=np.arange(0,300,0.1)
 ##define parameters
 b=0.8
 e=0.07
@@ -234,6 +234,7 @@ plot_PoE_H=ggplot(modelH_Output,aes(x="t"))+geom_line(aes(y="H1"), color='lightc
 
 #Show plots
 print(plot_PoE_P, plot_PoE_H)
+
 
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>ProjectSummary2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ProjectSummary</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11799,7 +11799,7 @@ div#notebook {
 <h2 id="Lotka-Volterra">Lotka-Volterra<a class="anchor-link" href="#Lotka-Volterra">&#182;</a></h2><p>The Lotka-Volterra Model describes a simple predator-prey relationship, in which prey population growth is only limited by the predator and vise versa. Each population (H = prey, P = predator) is described with a single differential equation, where b = prey birth rate, a = predator attack rate, e = conversion efficiency of prey to predators, and s = predator death rate.</p>
 <p>$dH/dt = bH - aPH$</p>
 <p>$dP/dt = eaPH - sP$</p>
-<p><img src="LV_conceptualmodel.png" alt="Conceptual Diagram of Lotka-Volterra Model"></p>
+<p><img src="conceptualModels/LV_conceptualmodel.png" alt="Conceptual Diagram of Lotka-Volterra Model"></p>
 <h3 id="Understanding-population-dynamics-through-time">Understanding population dynamics through time<a class="anchor-link" href="#Understanding-population-dynamics-through-time">&#182;</a></h3><p>First, we simulated the dynamics of this model with the following parameters and initial conditions: b = 0.5, a = 0.02, e = 0.1, s = 0.2, H0 = 25, P0 = 5. Prey (blue) and predator (red) dynamics are plotted against time.</p>
 
 </div>
@@ -14120,7 +14120,7 @@ hUKhUChs4/8BXEAvXwR5zJsAAAAASUVORK5CYII=
 <h2 id="Rosenzweig-MacArthur-Model">Rosenzweig-MacArthur Model<a class="anchor-link" href="#Rosenzweig-MacArthur-Model">&#182;</a></h2><p>The Rosenzweig-MacArthur Model expands upon the Lotka-Volterra Model by adding two additional parameters to account for the effect of self-limitation of the predator population and the effect of a saturating functional response between predators and prey density. Each population (H = prey, P = predator) is described with a single differential equation, where b = prey birth rate, α = intraspecific competition coefficient, w = predator attack rate, d = satuation effect, e = conversion efficiency of prey to predators, s = predator death rate:</p>
 <p>$dH/dt = bH(1-αH)-wPH/(d+H)$</p>
 <p>$dP/dt = ewPH/(d+H) - sP$</p>
-<p><img src="RM_conceptualmodel.png" alt="Conceptual Diagram of Rosenzweig-MacArthur Model"></p>
+<p><img src="conceptualModels/RM_conceptualmodel.png" alt="Conceptual Diagram of Rosenzweig-MacArthur Model"></p>
 <h3 id="Understanding-population-dynamics-through-time">Understanding population dynamics through time<a class="anchor-link" href="#Understanding-population-dynamics-through-time">&#182;</a></h3><p>First, we simulated the dynamics of this model with the following parameters and initial conditions: b = 0.8, e = 0.07, s = 0.2, w = 5,d = 400, α = 0.001, H0 = 500, P0 = 120.  Prey (blue) and predator (red) dynamics are plotted against time.</p>
 
 </div>
@@ -15971,7 +15971,7 @@ yGUYaBAREZHLMNAgIiIil2GgQURERC7DQIOIiIhchoEGERERuQwDDSIiInIZBhpERETkMv8Pxauf
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="How-do-the-dynamics-differ-from-Lotka-Volterra?">How do the dynamics differ from Lotka-Volterra?<a class="anchor-link" href="#How-do-the-dynamics-differ-from-Lotka-Volterra?">&#182;</a></h3><p>The</p>
+<h3 id="How-do-the-dynamics-differ-from-Lotka-Volterra?">How do the dynamics differ from Lotka-Volterra?<a class="anchor-link" href="#How-do-the-dynamics-differ-from-Lotka-Volterra?">&#182;</a></h3><p>In the Rosenzweig-MacArthur Model, both the predator and prey equations contain saturating functions that allow for non-cyclical dynamics. Adjustment of all parameters except prey birth rate, allow for cyclical dynamics.</p>
 <h3 id="What-can-you-say-about-the-&#8220;role&#8221;-of-each-parameter,-especially-what-causes-the-dyamics-to-differ-between-the-L-V-and-R-M-models?">What can you say about the &#8220;role&#8221; of each parameter, especially what causes the dyamics to differ between the L-V and R-M models?<a class="anchor-link" href="#What-can-you-say-about-the-&#8220;role&#8221;-of-each-parameter,-especially-what-causes-the-dyamics-to-differ-between-the-L-V-and-R-M-models?">&#182;</a></h3><ul>
 <li><p><strong><em>Prey birth rate (b)</em></strong> is related to how quickly the populations reach a stable density. It does not change the density of prey at equilibrium, but does change the maximum and minimum density of prey. It also strongly affects the number of predators at equilibrium. Increasing b results in higher density of predators at equilibrium.</p>
 </li>
@@ -15987,9 +15987,19 @@ yGUYaBAREZHLMNAgIiIil2GgQURERC7DQIOIiIhchoEGERERuQwDDSIiInIZBhpERETkMv8Pxauf
 </li>
 </ul>
 <h3 id="What-is-the-relationship-between-parameter-values-and-predator-abundance?">What is the relationship between parameter values and predator abundance?<a class="anchor-link" href="#What-is-the-relationship-between-parameter-values-and-predator-abundance?">&#182;</a></h3><ul>
-<li>prey birth rate (b): as prey birth rate increases, predator abundance increases</li>
+<li><p><strong><em>Prey birth rate (b):</em></strong> Birth rate is positively related to predator abundance.</p>
+</li>
+<li><p><strong><em>Predator attack rate (w):</em></strong> Increaing w causes predator abundance at equilibrium to slightly decrease and also causes instability (cycles). Decreasing w causes predator abundance to drop to zero.</p>
+</li>
+<li><p><strong><em>Intraspecific competition coefficient (α):</em></strong> Increasing α causes predator abundance to drop to zero. Decreasing α increases predator abundance and also decreases stability (causes cycles).</p>
+</li>
+<li><p><strong><em>Satuation effect (d):</em></strong> Increaing d causes predator abundance at equilibrium to decrease. Decreasing d also cause predator abundance to decrease, but not to the same extent. Decreasing d also causes instability (cycles).</p>
+</li>
+<li><p><strong><em>Conversion efficiency of prey to predators (e):</em></strong> Decreasing e causes predator abundance to drop tozero. Increasing increases predator abundance and also decreases stability (causes cycles).</p>
+</li>
+<li><p><strong><em>Predator death rate (s):</em></strong> Increasing s causes predator abundance to drop to near zero. Decreasing s increases predator abundance and also decreases stability (causes cycles).</p>
+</li>
 </ul>
-<p>-</p>
 
 </div>
 </div>
