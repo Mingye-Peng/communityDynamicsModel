@@ -8,6 +8,8 @@
 
 - The final project code can be found in the "code" directory.
 
+-------
+
 **All authors contributed equally to the final version.**
 
 **Question 1: Understanding the Lotka-Volterra Model**
@@ -20,5 +22,5 @@ Brittni Bertolet constructed the conceptual model. Aaron Long wrote the initial 
 
 **Question 3: Paradox of the Plankton**
 
-Josh Hobgood wrote initial code for the model simulation. Om Neelay wrote the first draft of summary questions. Brittni synthesized all information into the final Jupyter notebook. Brittni Bertolet led construction of Jupyter notebook and synthesis of all project components. 
+Josh Hobgood wrote initial code for the model simulation. Om Neelay wrote the first draft of summary questions. Brittni synthesized all information into the final Jupyter notebook. Brittni Bertolet led construction of Jupyter notebook and synthesis of all project components. Written answers to summary questions were emailed to Brittni Bertolet because Jupyter Notebook does not handle conflicts (our notebook broke twice). Git commits may reflect this. 
 

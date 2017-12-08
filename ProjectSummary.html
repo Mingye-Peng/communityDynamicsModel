@@ -15971,7 +15971,7 @@ yGUYaBAREZHLMNAgIiIil2GgQURERC7DQIOIiIhchoEGERERuQwDDSIiInIZBhpERETkMv8Pxauf
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="How-do-the-dynamics-differ-from-Lotka-Volterra?">How do the dynamics differ from Lotka-Volterra?<a class="anchor-link" href="#How-do-the-dynamics-differ-from-Lotka-Volterra?">&#182;</a></h3><p>In the Rosenzweig-MacArthur Model, both the predator and prey equations contain saturating functions that allow for non-cyclical dynamics. Adjustment of all parameters except prey birth rate, allow for cyclical dynamics.</p>
+<h3 id="How-do-the-dynamics-differ-from-Lotka-Volterra?">How do the dynamics differ from Lotka-Volterra?<a class="anchor-link" href="#How-do-the-dynamics-differ-from-Lotka-Volterra?">&#182;</a></h3><p>The Lotka-Volterra model describes predator-prey interactions as cyclical. A low population of predators leads to a spike of prey populations. In response to this spike, the predator population spikes, although not at the same magnitude, because of the availability of prey. Due to the large number of predators, the prey population falls quickly which subsequently leads to the predator population dropping in the absence of resources. The loss of predators triggers the cycle again. The Rosenzweig-McArthur, however, describes population dynamics as a stabilization of both predator and prey populations. Early, predator and prey populations may experience drops and spikes, but eventually both populations stabilize around a relatively constant abundance. Both populations stay at this constant abundance unless something perturbs the dynamics.</p>
 <h3 id="What-can-you-say-about-the-&#8220;role&#8221;-of-each-parameter,-especially-what-causes-the-dyamics-to-differ-between-the-L-V-and-R-M-models?">What can you say about the &#8220;role&#8221; of each parameter, especially what causes the dyamics to differ between the L-V and R-M models?<a class="anchor-link" href="#What-can-you-say-about-the-&#8220;role&#8221;-of-each-parameter,-especially-what-causes-the-dyamics-to-differ-between-the-L-V-and-R-M-models?">&#182;</a></h3><ul>
 <li><p><strong><em>Prey birth rate (b)</em></strong> is related to how quickly the populations reach a stable density. It does not change the density of prey at equilibrium, but does change the maximum and minimum density of prey. It also strongly affects the number of predators at equilibrium. Increasing b results in higher density of predators at equilibrium.</p>
 </li>
@@ -15987,11 +15987,11 @@ yGUYaBAREZHLMNAgIiIil2GgQURERC7DQIOIiIhchoEGERERuQwDDSIiInIZBhpERETkMv8Pxauf
 </li>
 </ul>
 <h3 id="What-is-the-relationship-between-parameter-values-and-predator-abundance?">What is the relationship between parameter values and predator abundance?<a class="anchor-link" href="#What-is-the-relationship-between-parameter-values-and-predator-abundance?">&#182;</a></h3><ul>
-<li><p><strong><em>Prey birth rate (b):</em></strong> Birth rate is positively related to predator abundance.</p>
+<li><p><strong><em>Prey birth rate (b):</em></strong> All values result in an initial drop of predator abundance followed by an increase which eventually plateaus. Increasing b values causes the drop to become less severe and the plateau to be at a higher value of predator abundance.</p>
 </li>
-<li><p><strong><em>Predator attack rate (w):</em></strong> Increaing w causes predator abundance at equilibrium to slightly decrease and also causes instability (cycles). Decreasing w causes predator abundance to drop to zero.</p>
+<li><p><strong><em>Predator attack rate (w):</em></strong> Decreasing w causes predator abundance to decrease over time to zero. Increasing w causes predator abundance to become cyclical.</p>
 </li>
-<li><p><strong><em>Intraspecific competition coefficient (α):</em></strong> Increasing α causes predator abundance to drop to zero. Decreasing α increases predator abundance and also decreases stability (causes cycles).</p>
+<li><p><strong><em>Intraspecific competition coefficient (α):</em></strong> Increasing α causes predator abundance to decrease over time to zero. Decreasing α increases predator abundance and also decreases stability (causes cycles).</p>
 </li>
 <li><p><strong><em>Satuation effect (d):</em></strong> Increaing d causes predator abundance at equilibrium to decrease. Decreasing d also cause predator abundance to decrease, but not to the same extent. Decreasing d also causes instability (cycles).</p>
 </li>
