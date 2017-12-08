@@ -14,15 +14,15 @@
 
 **Question 1: Understanding the Lotka-Volterra Model**
 
-Josh Hobgood constructed the conceptual model. Om Neelay wrote the initial code for the model simulations. Brittni Bertolet edited and organized code, commented additional psuedo-code, and helped create graphs. Josh Hobgood wrote the first draft of the summary questions. 
+Josh Hobgood constructed the conceptual model. Om Neelay wrote the code for the model simulations. Brittni Bertolet edited code, commented additional psuedo-code, and helped create graphs. Josh Hobgood wrote the first draft of the summary questions. 
 
 **Question 2: Understanding the Rosenzweig-MacArthur Model**
 
-Brittni Bertolet constructed the conceptual model. Aaron Long wrote the initial code for the model simulations. Brittni Bertolet edited and organized code, commented additional psuedo-code, and helped create graphs. Aaron Long wrote the first draft of the summary questions. 
+Brittni Bertolet constructed the conceptual model. Aaron Long wrote the code for the model simulations. Brittni Bertolet edited code, commented additional psuedo-code, and helped create graphs. Aaron Long wrote the first draft of the summary questions. 
 
 **Question 3: Paradox of the Plankton**
 
-Josh Hobgood wrote initial code for the model simulation. Om Neelay wrote the first draft of summary questions. 
+Josh Hobgood wrote code for the model simulation. Om Neelay wrote the first draft of summary questions. 
 
-Brittni Bertolet led the construction of Jupyter notebook and synthesis of project components. Written answers to summary questions were emailed to Brittni Bertolet because Jupyter Notebook does not handle conflicts (our notebook broke twice). Thus, Git commits may not reflect author's contributions. 
+Brittni Bertolet led the construction of Jupyter notebook and synthesis of project components. Written answers to summary questions were emailed to Brittni Bertolet because Jupyter Notebook does not handle conflicts (our notebook broke twice). Thus, Git commits may not adequately reflect authors' contributions. 
 
