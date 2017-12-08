@@ -8,7 +8,7 @@
 
 - The final project code can be found in the "code" directory.
 
-## All authors contributed equally to the final summary questions and construction of Jupyter notebook.
+## All authors contributed equally to the final version.
 
 **Question 1: Understanding the Lotka-Volterra Model**
 
