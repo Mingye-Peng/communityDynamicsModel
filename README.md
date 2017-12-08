@@ -1,6 +1,6 @@
 # Biocomputing_TeamAlphaWolf
 
-**Repository for Biocomputing Fall 2017 Final Project**
+### Repository for Biocomputing Fall 2017 Final Project**
 
 **Group members:** Brittni Bertolet, Josh Hobgood, Aaron Long, and Om Neelay
 
@@ -8,7 +8,7 @@
 
 - The final project code can be found in the "code" directory.
 
-## All authors contributed equally to the final version.
+### All authors contributed equally to the final version.
 
 **Question 1: Understanding the Lotka-Volterra Model**
 
