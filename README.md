@@ -24,5 +24,5 @@ Brittni Bertolet constructed the conceptual model. Aaron Long wrote the initial 
 
 Josh Hobgood wrote initial code for the model simulation. Om Neelay wrote the first draft of summary questions. 
 
-Brittni Bertolet led the construction of Jupyter notebook and synthesis of project components. Written answers to summary questions were emailed to Brittni Bertolet because Jupyter Notebook does not handle conflicts (our notebook broke twice). Git commits may reflect this. 
+Brittni Bertolet led the construction of Jupyter notebook and synthesis of project components. Written answers to summary questions were emailed to Brittni Bertolet because Jupyter Notebook does not handle conflicts (our notebook broke twice). Thus, Git commits may not reflect author's contributions. 
 
